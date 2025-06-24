@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "name": "abcd",
+      "email": "abc@gmail.com",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "abc",
+      "email": "abc@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "abc",
+      "email": "abc@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "abc",
+      "email": "abc@gmail.com"
+    },
+    {
+      "id": "8eab",
+      "name": "Asif",
+      "email": "asif@gmail.com"
+    },
+    {
+      "name": "xyz updated",
+      "email": "xyz@gmail.com",
+      "id": "7848"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "productName": "product 1",
+      "price": 2500
+    },
+    {
+      "id": "2",
+      "productName": "product 2",
+      "price": 3500
+    },
+    {
+      "id": "3",
+      "productName": "product 3",
+      "price": 4500
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "categoryName": "category 1"
+    },
+    {
+      "id": "2",
+      "categoryName": "category 2"
+    },
+    {
+      "id": "3",
+      "categoryName": "category 3"
+    }
+  ]
+}
