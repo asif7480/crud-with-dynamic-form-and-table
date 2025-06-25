@@ -25,7 +25,7 @@ function ProductList() {
             <li>{product.productName}</li>
             <li>{product.price}</li>
             <li>
-              <Link to={`/products/edit/${product.id}`}>Update</Link>
+              <Link state={product} to={`/products/edit/${product.id}`}>Update</Link>
               <button>Delete</button>
             </li>
           </ul>

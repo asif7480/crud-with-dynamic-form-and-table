@@ -38,20 +38,25 @@
       "price": 2500
     },
     {
-      "id": "2",
       "productName": "product 2",
-      "price": 3500
+      "price": 35000,
+      "id": "2"
     },
     {
       "id": "3",
       "productName": "product 3",
       "price": 4500
+    },
+    {
+      "id": "f56e",
+      "productName": "example",
+      "price": 1500
     }
   ],
   "categories": [
     {
-      "id": "1",
-      "categoryName": "category 1"
+      "categoryName": "category 1 updated",
+      "id": "1"
     },
     {
       "id": "2",
@@ -60,6 +65,10 @@
     {
       "id": "3",
       "categoryName": "category 3"
+    },
+    {
+      "id": "07b2",
+      "categoryName": "category 4"
     }
   ]
 }

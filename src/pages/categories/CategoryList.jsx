@@ -25,7 +25,7 @@ function CategoryList() {
             <li>{category.id}</li>
             <li>{category.categoryName}</li>
             <li>
-              <Link to={`/categories/edit/${category.id}`}>Update</Link>
+              <Link state={category} to={`/categories/edit/${category.id}`}>Update</Link>
               <button>Delete</button>
             </li>
           </ul>
