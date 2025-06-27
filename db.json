@@ -70,5 +70,21 @@
       "id": "07b2",
       "categoryName": "category 4"
     }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "employeeName": "abc",
+      "email": "abc@gmail.com",
+      "department": "networking",
+      "gender": "male"
+    },
+    {
+      "id": "2",
+      "employeeName": "def",
+      "email": "def@gmail.com",
+      "department": "networking",
+      "gender": "female"
+    }
   ]
 }

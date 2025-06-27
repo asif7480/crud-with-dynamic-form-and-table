@@ -12,6 +12,9 @@ import CategoryList from "./pages/categories/CategoryList"
 import AddCategory from "./pages/categories/AddCategory"
 import EditCategory from "./pages/categories/EditCategory"
 import Navbar from "./components/Navbar"
+import EmployeeList from "./pages/employees/EmployeeList"
+import AddEmployee from "./pages/employees/AddEmployee"
+import EditEmployee from "./pages/employees/EditEmployee"
 
 function App() {
 
@@ -32,6 +35,10 @@ function App() {
           <Route path="/categories" element={<CategoryList />} />
           <Route path="/categories/create" element={<AddCategory />} />
           <Route path="/categories/edit/:id" element={<EditCategory />} />
+
+          <Route path="/employees" element={<EmployeeList />} />
+          <Route path="/employees/create" element={<AddEmployee />} />
+          <Route path="/employees/edit/:id" element={<EditEmployee />} />
 
         </Routes>
       </BrowserRouter>

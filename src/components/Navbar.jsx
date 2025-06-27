@@ -8,6 +8,7 @@ function Navbar() {
             <Link to={`/users`}>Users</Link>
             <Link to={`/products`}>Products</Link>
             <Link to={`/categories`}>Categories</Link>
+            <Link to={`/employees`}>Employees</Link>
         </nav>
     </>
   )
