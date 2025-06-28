@@ -19,7 +19,7 @@ function EmployeeList() {
   return (
     <>
         <h2>EmployeeList</h2>
-        <Link to={`/employees`}>Add new employee</Link>
+        <Link to={`/employees/create`}>Add new employee</Link>
         {employees.map( (employee) => (
             <ul key={employee.id}>
                 <li>{employee.id}</li>
@@ -27,6 +27,10 @@ function EmployeeList() {
                 <li>{employee.email}</li>
                 <li>{employee.department}</li>
                 <li>{employee.gender}</li>
+                <li>
+                  <Link state={employee} to={`/employees/edit/${employee.id}`}>Update</Link>
+                  <button>Delete</button>
+                </li>
             </ul>
         ))}
         

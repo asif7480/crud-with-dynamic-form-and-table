@@ -1,6 +1,8 @@
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { BASE_URL } from "../../utils/constant"
+import DynamicForm from "../../components/DynamicForm"
+import { employeeSchema } from "../../schemas/employeeSchema"
 
 function AddEmployee() {
   const navigate = useNavigate()
@@ -28,11 +30,12 @@ function AddEmployee() {
 
   const handleSubmit = async(data) => {
     await axios.post(`${BASE_URL}/employees`, data)
-    navigate("/")
+    navigate("/employees")
   }
   return (
     <>
         <h2>Add New Employee</h2>
+        <DynamicForm fields={fields} onSubmit={handleSubmit} schema={employeeSchema} />
 
     </>
   )

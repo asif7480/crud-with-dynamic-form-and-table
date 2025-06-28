@@ -5,9 +5,15 @@ import { useParams } from "react-router-dom"
 
 function DynamicForm({ fields, onSubmit, defaultValues = {}, schema }) {
 
-  const { register, handleSubmit, setValue, formState: { errors } } = useForm({
+  const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm({
     resolver: zodResolver(schema)
   })
+
+  // const watchFields = watch("department");
+
+  // useEffect( () => {
+  //   console.log("watch values", watchFields)
+  // }, [watchFields])
 
   useEffect(() => {
     Object.entries(defaultValues).forEach(([key, val]) => setValue(key, val))
@@ -48,7 +54,7 @@ function DynamicForm({ fields, onSubmit, defaultValues = {}, schema }) {
 
             {/* select */}
             {field.type === "select" && (
-              <select {...register('field.name')}>
+              <select {...register(field.name)}>
                 <option value="">Select any option</option>
                 {
                   field.options?.map((option) => (
@@ -62,7 +68,7 @@ function DynamicForm({ fields, onSubmit, defaultValues = {}, schema }) {
 
             {/* Checkbox */}
             {field.type === "checkbox" && (
-              <input type="checkbox" {...register('field.name')} />
+              <input type="checkbox" {...register(field.name)} />
             )}
 
             {/* Checkbox Group (multi-selection) */}
@@ -82,7 +88,7 @@ function DynamicForm({ fields, onSubmit, defaultValues = {}, schema }) {
             {field.type === "radio" && (
               field.options?.map((option) => (
                 <label key={option.value}>
-                  <input type="radio" value={option.value} {...register('field.name')} />
+                  <input type="radio" value={option.value} {...register(field.name)} />
                   {option.label}
                 </label>
               ))
@@ -94,6 +100,10 @@ function DynamicForm({ fields, onSubmit, defaultValues = {}, schema }) {
             )}
           </div>
         ))}
+
+        <button type="submit">
+          {isEdit ? "update" : "submit"}
+        </button>
       </form>
 
     </>
